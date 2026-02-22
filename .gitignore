@@ -1,0 +1,34 @@
+# 虚拟环境（类似 .NET 的 bin/obj，绝对不要提交）
+.venv/
+venv/
+env/
+
+# Python 缓存文件
+__pycache__/
+*.py[cod]
+*.pyo
+
+# 分发/打包
+dist/
+build/
+*.egg-info/
+*.egg
+
+# IDE — PyCharm
+.idea/
+
+# 环境变量（存放 API Key 等敏感信息）
+.env
+.env.local
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 测试与覆盖率
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook（如果以后用到）
+.ipynb_checkpoints/
