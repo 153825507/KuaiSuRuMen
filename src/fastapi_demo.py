@@ -71,3 +71,18 @@ async def log_request(request, call_next):
     response = await call_next(request)
     print(f"Response:{response.status_code}")
     return response
+
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello FastAPI!"}
+
+# 启动服务（保留热重载的正确写法）
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(
+        "fastapi_demo:app",  # 关键修改：文件名:app对象（不要加.py）
+        host="0.0.0.0",
+        port=8000,
+        reload=True          # 热重载可用了
+    )
